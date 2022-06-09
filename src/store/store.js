@@ -134,7 +134,7 @@ export default new Vuex.Store({
                 this.message = "";
               }
             },
-            error: false,
+            error: true,
             message: "",
           },
         },
@@ -176,9 +176,10 @@ export default new Vuex.Store({
       let success = true;
       for (let key in currForm.control) {
         success = success && !currForm.control[key].error;
+        console.log("__", key, "__", currForm.control[key].error);
       }
       currForm.success = success;
-      // console.log(currForm.success);
+      console.log("success_", currForm.success);
     },
     increaseStep(state) {
       const currForm = state.formStep[state.currentStep - 1];

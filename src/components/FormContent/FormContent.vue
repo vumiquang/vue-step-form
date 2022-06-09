@@ -12,11 +12,6 @@
       <input-custom :id="key" :control="control" :name="key"></input-custom>
       <p class="message" v-if="control.error">{{ control.message }}</p>
     </div>
-    <!-- <div class="form-control error">
-      <label for="">Your company name</label>
-      <input type="text" />
-      <p class="message">this is error</p>
-    </div> -->
   </form-step-wrap>
 </template>
 <script>
