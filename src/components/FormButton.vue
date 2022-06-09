@@ -24,7 +24,7 @@
     <button
       class="btn prev"
       v-show="$store.state.currentStep == $store.state.formStep.length"
-       @click="$store.commit('sendForm')"
+      @click="$store.commit('sendForm')"
     >
       Send
     </button>
@@ -49,6 +49,9 @@ export default {};
   cursor: pointer;
   box-shadow: 1px 1px 10px rgb(0 0 0 / 40%);
   transition: box-shadow 0.35s ease-out;
+}
+.btn:hover {
+  box-shadow: 1px 1px 10px rgb(0 0 0 / 40%), 6px 6px 12px rgb(0 0 0 / 20%);
 }
 .btn ~ .btn {
   margin-left: 16px;
